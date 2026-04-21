@@ -1,0 +1,9 @@
+{
+  "projectName": "AerisClaim",
+  "defaultInstructions": [
+    "Read CLAUDE.md, AGENTS.md, PRODUCT.md, DATA_MODEL.md, WORKFLOWS.md, and AERISCLAIM_MASTER_ROADMAP.md before major implementation work.",
+    "Use website-building skill for landing page, hero, app shell, typography, spacing, motion, and design refinement.",
+    "Preserve multi-tenant architecture and auditability.",
+    "Avoid AI slop in design and copy."
+  ]
+}
