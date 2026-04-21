@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Environment — NEVER commit secrets
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Vercel
+.vercel/
+
+# Supabase local state
+.supabase/
+supabase/.temp/
+supabase/.branches/
+
+# TypeScript
+*.tsbuildinfo
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+.vercel
+.env*.local

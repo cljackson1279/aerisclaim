@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────────────────── */
+:root {
+  --ac: #C01028;
+  --ac-hover: #A00C22;
+  --ac-dim: rgb(192 16 40 / 0.10);
+  --ac-glow: rgb(192 16 40 / 0.06);
+}
+
+@theme inline {
+  --color-ac: #C01028;
+  --color-ac-hover: #A00C22;
+  --color-ac-dim: rgb(192 16 40 / 0.10);
+  --color-base: #09090B;
+  --color-surface: #111115;
+  --color-elevated: #18181D;
+  --color-brd: #27272F;
+  --color-brd-subtle: #1F1F27;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ─── Base ───────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #09090B;
+  color: #F4F4F5;
+  font-family: var(--font-geist-sans), -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Selection ──────────────────────────────────────────────── */
+::selection {
+  background: rgb(192 16 40 / 0.25);
+  color: #fff;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090B;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272F;
+  border-radius: 3px;
+}
+
+/* ─── Animations ─────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+.animate-fade-up-delay-1 {
+  animation: fadeUp 0.7s 0.12s ease both;
+}
+.animate-fade-up-delay-2 {
+  animation: fadeUp 0.7s 0.24s ease both;
+}
+.animate-fade-up-delay-3 {
+  animation: fadeUp 0.7s 0.36s ease both;
+}
+.animate-fade-in {
+  animation: fadeIn 0.6s 0.1s ease both;
+}
+.pulse-dot {
+  animation: pulse-dot 2s infinite;
+}
+
+/* ─── Focus visible ──────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgb(192 16 40 / 0.65);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
